@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GMEROPY | Linktree</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hanzcode1/LinktreeBuilder@main/style.css">
+<script src="https://cdn.jsdelivr.net/gh/hanzcode1/LinktreeBuilder@main/script.js"></script>
+
+</head>
+<body>
+
+<div class="loading-overlay" id="loading">
+  <div class="loading-pixels">
+    <div class="loading-pixel"></div>
+    <div class="loading-pixel"></div>
+    <div class="loading-pixel"></div>
+  </div>
+</div>
+
+<div id="app"></div>
+
+<script>
+Linktree.init({
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmOGCBOAYeOLbbD_lE7dzb8m5BsAk7RX1I8raICxPZtUtuexsJlGXhAOvx&s=10",
+  nama: "GMEROPY",
+  deskripsi: "Web Design / Web Develop",
+
+  medsos: [
+    {
+      platform: "youtube",
+      url: "https://youtube.com/@gmeropy?si=jftQ42A84f0IYxAB"
+    },
+    {
+      platform: "tiktok",
+      url: "https://vm.tiktok.com/ZS9JmQQ9QWPVh-91nRq/"
+    },
+    {
+      platform: "instagram",
+      url: "https://www.instagram.com/gmeropystore?igsh=MWNpNGlzcW53dHZsbg=="
+    },
+    {
+      platform: "github",
+      url: "gmeropy.apk"
+    }
+  ],
+
+  links: [
+    {
+      text: "GMEROPY STORE (Top Up)",
+      url: "https://jepstore.my.id/"
+    }
+  ],
+
+  footer: "GMEROPY"
+});
+
+
+// 🔥 GANTI ICON GITHUB SAJA
+setTimeout(() => {
+
+  const icons = document.querySelectorAll("#app i");
+
+  icons.forEach(icon => {
+
+    if (icon.classList.contains("fa-github")) {
+
+      const parent = icon.parentElement;
+
+      // Ganti isi icon dengan logo kamu
+      parent.innerHTML = '<img src="logo-gmeropy.png" style="width:28px;">';
+
+      parent.style.background = "#111";
+      parent.style.transition = "0.3s";
+
+      parent.onmouseover = function(){
+        this.style.background = "linear-gradient(45deg,#00f7ff,#ff00c8)";
+        this.style.transform = "translateY(-5px)";
+      };
+
+      parent.onmouseout = function(){
+        this.style.background = "#111";
+        this.style.transform = "translateY(0px)";
+      };
+
+    }
+
+  });
+
+}, 1000);
+</script>
+
+</body>
+</html>
